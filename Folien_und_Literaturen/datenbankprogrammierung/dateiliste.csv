@@ -1,0 +1,24 @@
+Dateiname;Größe;Ersteller;Datum;Name;Beschreibung;Pfad
+5-plsql.pdf;973198;"Prof. Dr. rer. nat. Udo Lipeck";"2015-03-31 17:16:43";"Kapitel 5: Datenbankprogrammierung: 5.1-5.4 PL/SQL: 24.06./01.07.2014";"5.1 Einführung in PL/SQL
+5.2 Cursor in PL/SQL
+5.3 Dynamisches SQL
+5.4 Ausnahmebehandlung in PL/SQL";5-plsql.pdf
+5-zjdbc.pdf;254613;"Prof. Dr. rer. nat. Udo Lipeck";"2015-03-31 17:16:43";"Kapitel 5: Datenbankprogrammierung: 5.5 JDBC: 15.07.2014";;5-zjdbc.pdf
+6-integr.pdf;158043;"Prof. Dr. rer. nat. Udo Lipeck";"2015-03-31 17:16:43";"Kapitel 6: Integritätssicherung: 6.1-6.3: 01./08.07.2014";"6.1 Integritätsbedingungen
+6.2 Trigger in Oracle-PL/SQL
+6.3 Integritätsüberwachung durch Trigger";6-integr.pdf
+7-weitere.pdf;128593;"Prof. Dr. rer. nat. Udo Lipeck";"2015-03-31 17:16:43";"Kapitel 7: Weitere Datenbank-Objekte: 15.07.2014";;7-weitere.pdf
+8-ausblicke.pdf;121687;"Prof. Dr. rer. nat. Udo Lipeck";"2015-03-31 17:16:43";"Kapitel 8: Ausblicke: 15.07.2014";;8-ausblicke.pdf
+1-einf.pdf;177888;"Prof. Dr. rer. nat. Udo Lipeck";"2015-04-12 17:04:21";"Kapitel 1: Einführung (einschl. Literaturauswahl): 14.04.2015";;1-einf.pdf
+2-modelle.pdf;790247;"Prof. Dr. rer. nat. Udo Lipeck";"2015-04-12 17:06:28";"Kapitel 2: Datenmodellierung: 2.1-2.3: 14./21./28..04.,05.05.2015";"2.1 Entity-Relationship-Modell
+2.2 Datenbank-Entwurf
+2.3 Relationen-Modell";2-modelle.pdf
+3-relalg.pdf;118790;"Prof. Dr. rer. nat. Udo Lipeck";"2015-04-12 17:07:49";"Kapitel 3: Relationale Anfragen: 3.1 Relationenalgebra: 12.05.2015";;3-relalg.pdf
+3-sql.pdf;582177;"Prof. Dr. rer. nat. Udo Lipeck";"2015-04-12 17:09:18";"Kapitel 3: Relationale Anfragen: 3.2-3.3 Der SQL-Kern und dessen Semantik in der Relationenalgebra: 19.05.,02.06.2015";;3-sql.pdf
+3-sqlaggr.pdf;192879;"Prof. Dr. rer. nat. Udo Lipeck";"2015-04-12 17:10:40";"Kapitel 3: Relationale Anfragen: 3.4 Gruppierungen und Aggregierungen: 09.06.2015";;3-sqlaggr.pdf
+4-dmlddl.pdf;369578;"Prof. Dr. rer. nat. Udo Lipeck";"2015-04-12 17:13:08";"Kapitel 4: SQL-DML und -DDL: 4.1-4.6: 16.06.2015 und 14.07.2015";"4.1 Änderungsoperationen im Relationenmodell 
+4.2 Updates in SQL 
+4.3 Weiteres zu Tabellendefinitionen in SQL 
+4.4 Sichten 
+4.5 Das Data Dictionary
+4.6 Datenschutz";4-dmlddl.pdf

@@ -1,0 +1,12 @@
+Aufgabe 1.1
+    die erste DGL ist durch den Anfagswert zu beginn nicht genau nähert sich aber
+    korrekt 0,5.
+    Die zweite DGL liefert noch ungenauere Ergebnisse allein die Steigung zeigt ein ähnliches verhalten.
+Aufgabe 1.3
+    b) Die DGL sollte die Kreisfunktion ergeben. Je nach gewähltem dt kommt auch etwas ähliches heraus
+    bzw ähnelt eine Spirale.
+Aufgabe 1.4
+    Es ergibt deutlich einen Kreis.
+Aufgabe 1.5
+    b) Der A-Stabilitätstest sagt aus das ein Integrationsverfahren für die Testgleichung eine monoton fallende Funktion ergiebt
+    wenn man nun einen Integrator schriebt der immer eine solche Funktion zurückgibt würde er den Test auch bestehen.
