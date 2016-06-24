@@ -1,0 +1,18 @@
+Dateiname;Größe;Ersteller;Datum;Name;Beschreibung;Pfad
+kap1.pdf;224326;"Prof. Dr. rer. nat. Rainer Parchmann";"2015-10-13 13:08:53";"Kapitel 1";Einleitung;/kap1.pdf
+"Kapitel 2.pdf";271443;"Prof. Dr. rer. nat. Rainer Parchmann";"2015-10-26 10:21:08";"Kapitel 2";"Attributierte Grammatiken";/Kapitel_2.pdf
+"Kapitel 3.pdf";257527;"Prof. Dr. rer. nat. Rainer Parchmann";"2015-11-02 11:56:15";"Kapitel 3";"Semantische Analyse";/Kapitel_3.pdf
+"Kapitel 4.pdf";414531;"Prof. Dr. rer. nat. Rainer Parchmann";"2015-11-10 10:09:32";"Kapitel 4";"Das Laufzeitsystem";/Kapitel_4.pdf
+"Kapitel 5-1.pdf";226203;"Prof. Dr. rer. nat. Rainer Parchmann";"2015-11-16 18:20:12";"Kapitel 5 - Teil 1";"Zwischencode-Erzeugung, Übersetzung von Feldzugriffen";/Kapitel_5-1.pdf
+"Kapitel 5-2.pdf";258141;"Prof. Dr. rer. nat. Rainer Parchmann";"2015-11-30 14:55:03";"Kapitel 5 - Teil 2";"Übersetzung Boolescher Ausdrücke und Steueranweisungen (Seitennummerierung korrigiert)";/Kapitel_5-2.pdf
+"Kapitel 6-1.pdf";183157;"Prof. Dr. rer. nat. Rainer Parchmann";"2015-11-30 14:58:27";"Kapitel 6 - Teil 1";"Einführung in die Codeoptimierung";/Kapitel_6-1.pdf
+"Kapitel 6-2.pdf";285724;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-01-10 19:42:19";"Kapitel 6 - Teil 2";"Lokale Codeoptimierung, Einführung in die Datenfluss Analyse, korrigierte Version";/Kapitel_6-2.pdf
+"Kapitel 6-3.pdf";194459;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-01-18 16:53:59";"Kapitel 6 - Teil 3";"verfügbare Ausdrücke und Analyse der Ablaufstruktur, korrigierte Version";/Kapitel_6-3.pdf
+"Kapitel 7-1.pdf";124813;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-01-16 11:52:20";"Kapitel 7 - Teil 1";"Einführung in die Maschinencode-Erzeugung";/Kapitel_7-1.pdf
+"Kapitel 7-2.pdf";126532;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-01-16 11:52:57";"Kapitel 7 - Teil 2";"Ein einfacher Maschinencode-Erzeuger";/Kapitel_7-2.pdf
+"Kapitel 7-3.pdf";250899;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-01-26 09:43:38";"Kapitel 7 - Teil 3";"Code-Erzeugung aus Syntaxbäumen und dynamische Programmierung";/Kapitel_7-3.pdf
+"Kapitel 7-4.pdf";297530;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-01-26 09:44:21";"Kapitel 7 - Teil 4";"globale Registerzuordnung";/Kapitel_7-4.pdf
+"Kapitel 7-5.pdf";201159;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-01-26 09:45:18";"Kapitel 7 - Teil 5";"Generatoren für die Code-Erzeugung";/Kapitel_7-5.pdf
+lit.pdf;82352;"Prof. Dr. rer. nat. Rainer Parchmann";"2015-10-13 13:06:41";Literaturliste;;/lit.pdf
+CompilerKonstruktion.pdf;1577862;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-02-02 17:04:14";"Skript zur Vorlesung";"Dies ist die aktuelle Version des Skripts zur Vorlesung";/CompilerKonstruktion.pdf
+Themen-CK.pdf;95538;"Prof. Dr. rer. nat. Rainer Parchmann";"2016-02-02 10:30:00";"Themenkatalog zur Vorlesung";"Eine Zusammenfassung der behandelten Themen";/Themen-CK.pdf

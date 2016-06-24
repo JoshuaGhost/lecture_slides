@@ -1,0 +1,31 @@
+In Übung1.txt befindet sich der Code für das processing live sample. Direkt am Anfang kann der sichtbare Bereich und die stepSize (delta_t) sowie der initial Wert (in values) eingestellt werden.
+innerhalb der draw-Methode muss exakt eine der "float[] integrationResult"-Zeilen einkommentiert sein. Dort kann die Methode (Heun/expliziter Euler) und Funktion festgelegt werden. Die zweite Zeile ist für den impliziten Euler. die Zahl am Anfang legt fest ob die erste (0) Funktion oder die zweite (1) integriert wird.
+
+Alle CSV-Dateien wurden mit einer stepSize von 0.01 angefertigt und einem jeweils angemessenen Bereich (zu sehen an minimalen und maximalem t).
+
+Aufgabe 1.1:
+Erste Funktion: Visueller Vergleich mit Wolfram Alpha (http://www.wolframalpha.com/input/?i=df%2Fdx+%2B2+*f+%3D1) zeigt eine recht gute Annäherung bei ausreichend kleinem delta_t.
+Zweite Funktion: Auch hier eine recht gute Annäherung zu Wolfram Alpha (http://www.wolframalpha.com/input/?i=y%27+%3D+y%C2%B2).
+
+Aufgabe 1.2:
+Erste Funktion: Ergebnisse unterscheiden sich fast nicht von denen des expliziten Eulers.
+Zweite Funktion: Die Werte erreichen hier früher (t=0.93 explizit:10.72 - implizit: 28.97) höhere Werte. Die letzten paar werden bereits als NaN zurückgegeben.
+
+Aufgabe 1.3: b)
+Die analytische Lösung: http://www.wolframalpha.com/input/?i={a%27%2Cb%27}%3D{-b%2Ca}
+Die numerische Lösung sieht der analytischen recht ähnlich - Schlägt aber mit der Zeit immer weiter aus, die Geschwindigkeit mit der sich der Fehler erhöht hängt dabei stark von delta_t ab.
+
+Aufgabe 1.4:
+Da wie in 1.3.b beschrieben der Fehler nach hinten größer wird, macht es am meisten Sinn die letzten Wertepaare zu vergleichen:
+expliziter Euler					Heun-Verfahren
+20	-0.556983956	1.460325293		20	-0.505304753	1.320862259
+Wie gut zu sehen ist, ist der Fehler im Heun-Verfahren geringer.
+
+Aufgabe 1.5: a)
+Es werden k=1, k=1000 und k von 2 bis 20 getestet. Zum Ausführen des Stabilitätstest muss die gesamte for-Schleife in der draw-Methode auskommentiert werden und println(aStabilityTest(explicitEuler)); einkommentiert.
+
+Aufgabe 1.5: b)
+Ein Integrator sollte bei A-Stabilität eine monoton fallende Folge von Werten zurückgeben. Nicht a-stabile Integratoren fangen bei bestimmten k an auszuschlagen/oszillieren.
+
+Ein Integrator der nicht löst, aber a-stabil ist: f(t+1) = abs(f'(f(t))) * 0.99;
+Gemeint ist das immer der Betrag dessen genommen wird, was die A-Funktion zurückliefert und dies dann mit 0.99 multipliziert wird, um den nächsten Wert zu bilden. Ist monoton fallend, löst aber rein gar nichts.

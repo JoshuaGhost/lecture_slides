@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Übung-01 by Alexander Treptau</title>
+  <style type="text/css" media="screen">
+    .editor {
+        margin: 0;
+        position: relative;
+        height: 300px;
+        width: 600px;
+    }
+    iframe {
+        margin-top:1em;
+        position: relative;
+        width: 600px;
+        border: 1px solid black;
+        height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Aufgabe 1.1 Explizite Integration</h2>
+<pre id="editor0" target="frame0" class="editor">
+    function expliziteIntegration(f, h, v0, N){
+        var t0 = v0[0];
+        var y =  v0[1];
+
+        for(var i=0; i < N; i++){
+            t = t0 + h*i;
+            y = y  + h*f( t, y );
+
+            addPoint( t, y );
+        }
+    }
+
+    function IntegrationI(){
+        f = function(x,y){
+            return (1-(2*y));
+        };
+        expliziteIntegration(f, 0.01, [0.0, 1.0], 100);
+        return "f' + 2 * f = 1";
+    }
+
+    function IntegrationII(){
+        f = function(x,y){
+            return y*y;
+        };
+        expliziteIntegration(f, 0.01, [0.0, 1.0], 100);
+        return "y' = y^2";
+    }
+
+    // Hier Auswählen ob IntegrationI oder IntegrationII
+    Integration = IntegrationI;
+
+    // Ab hier wirds uninteressant
+    var plot;
+    var points = [];
+    function addPoint(x,y){
+        points.push(new GPoint(x, y));
+    }
+
+    function setup() {
+        createCanvas(600, 400);
+
+        plot = new GPlot(this, 0, 0, 600, 400);
+
+        plot.setTitleText("Explizite Integration: " + Integration());
+
+        plot.getXAxis().setAxisLabelText("t");
+
+        plot.setLogScale("");
+        plot.getYAxis().setAxisLabelText("y");
+
+        plot.setPoints(points);
+        plot.setPointColor(color(100, 100, 255, 255));
+    }
+
+    function draw() {
+        plot.defaultDraw();
+    }
+</pre>
+<iframe id="frame0"></iframe>
+
+<h2>Aufgabe 1.2 – Implizite Integration</h2>
+<p>-</p>
+
+<h2>Aufgabe 1.3 – Mehrdimensionale Differentialgleichunge</h2>
+<h3>a)</h3>
+<pre id="editor1" target="frame1" class="editor">
+    function expliziteIntegration(f, h, v0, N){
+        var t0 = v0[0];
+        var fx = v0[1][0];
+        var fy = v0[1][1];
+
+        for(var i=0; i < N; i++){
+            t = t0 + h*i;
+
+            ff = f( t,  [fx, fy]);
+
+            fx = fx  + h * ff[0];
+            fy = fy  + h * ff[1];
+
+            addPoint( t, [fx, fy] );
+        }
+    }
+
+    function IntegrationI(){
+        f = function(x,y){
+            return [(-y[0]*y[1]),(-y[1])];
+        };
+        expliziteIntegration(f, 0.01, [0.0, [1.0,1.0]], 100);
+        return "I";
+    }
+
+    function IntegrationII(){
+        f = function(x,y){
+            return [y[0],-y[1]];
+        };
+        expliziteIntegration(f, 0.01, [0.0, [1.0,1.0]], 100);
+        return "II";
+    }
+
+    // Hier Auswählen ob IntegrationI oder IntegrationII
+    Integration = IntegrationI;
+
+    var plot;
+    var points = [];
+    function addPoint(x,y){
+        // hier kann man x oder y sich nur anzeigen lassen
+        points.push(new GPoint(x, y[0]));
+        points.push(new GPoint(x, y[1]));
+    }
+
+    // Ab hier wirds uninteressant
+    function setup() {
+        createCanvas(600, 400);
+
+        plot = new GPlot(this, 0, 0, 600, 400);
+
+        plot.setTitleText("Explizite Integration: " + Integration());
+
+        plot.getXAxis().setAxisLabelText("t");
+
+        plot.setLogScale("");
+        plot.getYAxis().setAxisLabelText("x und y");
+
+        plot.setPoints(points);
+        plot.setPointColor(color(100, 100, 255, 255));
+    }
+
+    function draw() {
+        plot.defaultDraw();
+    }
+
+</pre>
+<iframe id="frame1"></iframe>
+
+<h3>b)</h3>
+<p>-</p>
+
+<h2>Aufgabe 1.4 – Predictor-Corrector Verfahren</h2>
+<pre id="editor2" target="frame2" class="editor">
+    function HeunIntegration(f, h, v0, N){
+        var t0 = v0[0];
+        var fx = v0[1][0];
+        var fy = v0[1][1];
+
+        var fx_k = fx;
+        var fy_k = fy;
+
+        for(var i=0; i < N; i++){
+            t  = t0 + h*i;     // t_k
+            tn = t0 + h*(i+1); // t_k+1
+
+            ff = f( t,  [fx, fy]);
+
+            // xe_k+1 = x_k + h * f(t_k, x_k)
+            fx = fx_k  + h * ff[0];
+            fy = fy_k  + h * ff[1];
+
+            ff = f( tn,  [fx, fy]);
+
+            // x_k+1  = 0.5*x_k + 0.5*(xe_k+1 + h * f(t_k+1, xe_k+1))
+            fx = 0.5 * fx_k + 0.5 * ( fx + h * ff[0]);
+            fy = 0.5 * fy_k + 0.5 * ( fy + h * ff[1]);
+
+            fx_k = fx;
+            fy_k = fy;
+
+            addPoint( t, [fx, fy] );
+        }
+    }
+
+    function IntegrationI(){
+        f = function(x,y){
+            return [(-y[0]*y[1]),(-y[1])];
+        };
+        HeunIntegration(f, 0.01, [0.0, [1.0,1.0]], 100);
+        return "I";
+    }
+
+    function IntegrationII(){
+        f = function(x,y){
+            return [y[0],-y[1]];
+        };
+        HeunIntegration(f, 0.01, [0.0, [1.0,1.0]], 100);
+        return "II";
+    }
+
+    // Hier Auswählen ob IntegrationI oder IntegrationII
+    Integration = IntegrationI;
+
+
+    var plot;
+    var points = [];
+    function addPoint(x,y){
+        // hier kann man x oder y sich nur anzeigen lassen
+        points.push(new GPoint(x, y[0]));
+        points.push(new GPoint(x, y[1]));
+    }
+
+    // Ab hier wirds uninteressant
+    function setup() {
+        createCanvas(600, 400);
+
+        plot = new GPlot(this, 0, 0, 600, 400);
+
+        plot.setTitleText("Heun Integration: " + Integration());
+
+        plot.getXAxis().setAxisLabelText("t");
+
+        plot.setLogScale("");
+        plot.getYAxis().setAxisLabelText("x und y");
+
+        plot.setPoints(points);
+        plot.setPointColor(color(100, 100, 255, 255));
+    }
+
+    function draw() {
+        plot.defaultDraw();
+    }
+
+</pre>
+<iframe id="frame2"></iframe>
+
+<h2>Aufgabe 1.5 – A-Stabilität</h2>
+<pre id="editor3" target="frame3" class="editor">
+    function AStabilityCheck1D(Integrator){
+        for(var k = 200; k < 210; k++){
+            f = function(x,y){
+                return -k*y;
+            }
+            Integrator(f, 0.01, [0.0, 1.0], 100);
+        }
+
+        return "";
+    }
+
+    // HeunIntegration1D oder expliziteIntegration1D
+    var toCheck = HeunIntegration1D;
+
+    function HeunIntegration1D(f, h, v0, N){
+        var t0 = v0[0];
+        var fx = v0[1];
+
+        var fx_k = fx;
+
+        for(var i=0; i < N; i++){
+            t  = t0 + h*i;     // t_k
+            tn = t0 + h*(i+1); // t_k+1
+
+            ff = f( t,  fx);
+
+            // xe_k+1 = x_k + h * f(t_k, x_k)
+            fx = fx_k  + h * ff;
+
+            ff = f( tn, fx);
+
+            // x_k+1  = 0.5*x_k + 0.5*(xe_k+1 + h * f(t_k+1, xe_k+1))
+            fx = 0.5 * fx_k + 0.5 * ( fx + h * ff);
+
+            fx_k = fx;
+
+            addPoint( t, fx );
+        }
+    }
+
+    function expliziteIntegration1D(f, h, v0, N){
+        var t0 = v0[0];
+        var y =  v0[1];
+
+        for(var i=0; i < N; i++){
+            t = t0 + h*i;
+            y = y  + h*f( t, y );
+
+            addPoint( t, y );
+        }
+    }
+
+    // Ab hier wirds uninteressant
+
+    var plot;
+    var points = [];
+    function addPoint(x,y){
+        points.push(new GPoint(x, y));
+    }
+
+
+    function setup() {
+        createCanvas(600, 400);
+
+        plot = new GPlot(this, 0, 0, 600, 400);
+
+        plot.setTitleText("A-Stabilität: " + AStabilityCheck1D(toCheck));
+        plot.getXAxis().setAxisLabelText("t");
+
+        plot.setLogScale("");
+        plot.getYAxis().setAxisLabelText("x");
+
+        plot.setPoints(points);
+        plot.setPointColor(color(100, 100, 255, 255));
+    }
+
+    function draw() {
+        plot.beginDraw();
+        plot.drawBackground();
+        plot.drawBox();
+        plot.drawXAxis();
+        plot.drawYAxis();
+        plot.drawTopAxis();
+        plot.drawRightAxis();
+        plot.drawTitle();
+        plot.getMainLayer().drawPoints();
+        plot.endDraw();
+    }
+
+</pre>
+<iframe id="frame3"></iframe>
+
+<script src="libs/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+function addEditor(name){
+    var editor = document.getElementById(name);
+    var frameD = document.getElementById(editor.getAttribute("target"));
+    var frame = frameD.contentDocument || frameD.contentWindow.document;
+    console.log(editor,frame);
+
+    var editor = ace.edit(name);
+    editor.setTheme("ace/theme/twilight");
+    editor.getSession().setMode("ace/mode/javascript");
+
+    var baseTextStart = '<!DOCTYPE html><html><head>\n\
+    <script language="javascript" type="text/javascript" src="libs/p5.min.js"><\/script>\n\
+    <script language="javascript" type="text/javascript" src="libs/grafica.min.js"><\/script>';
+
+    var baseTextEnd = '<\/head><body style="overflow:hidden;margin:0;"><\/body><\/html>';
+
+    var frame;
+
+    function updateFrame(){
+      var text = baseTextStart+'<script language="javascript">'+editor.getValue()+'<\/script>'+baseTextEnd;
+      //var text = baseTextStart+editor.getValue()+baseTextEnd;
+
+      frame.open();
+      frame.write(text);
+      frame.close();
+    }
+    var delayNav;
+    editor.getSession().on('change', function(e) {
+      clearTimeout(delayNav);
+      delayNav = setTimeout(updateFrame, 500);
+    });
+
+    updateFrame();
+}
+
+
+    window.onload = function(){
+      addEditor("editor0");
+      addEditor("editor1");
+      addEditor("editor2");
+      addEditor("editor3");
+    };
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+Dateiname;Größe;Ersteller;Datum;Name;Beschreibung;Pfad
+"1. Introduction.pdf";1033066;"Prof. Dr. Panagiotis Papadimitriou";"2015-10-14 17:02:16";"1. Introduction";"Lecture slides on Introduction to Network Management";/1._Introduction.pdf
+SNMP.pdf;408875;"Prof. Dr. Panagiotis Papadimitriou";"2015-10-21 12:32:16";"2. SNMP";"Lecture Slides on SNMP";/SNMP.pdf
+"End-host Management.pdf";744212;"Prof. Dr. Panagiotis Papadimitriou";"2015-10-28 01:45:09";"3. Host Management";"Lecture slides on Host Management";/End-host_Management.pdf
+"Router Configuration.pdf";2411553;"Prof. Dr. Panagiotis Papadimitriou";"2015-11-04 15:28:01";"4. Router Configuration";"Lecture Slides on Router Configuration";/Router_Configuration.pdf
+"Middlebox Configuration.pdf";1601754;"Prof. Dr. Panagiotis Papadimitriou";"2015-11-25 00:38:55";"5. Middlebox Configuration";"Lecture slides on Middlebox Configuration";/Middlebox_Configuration.pdf
+"Virtual Network Management.ppsx";3019057;"Prof. Dr. Panagiotis Papadimitriou";"2016-01-19 11:56:36";"6. Virtual Network Management";"Lecture slides on Virtual Network Management";/Virtual_Network_Management.ppsx
+"Enterprise Network Management.ppsx";523379;"Prof. Dr. Panagiotis Papadimitriou";"2016-01-26 12:20:44";"7. Enterprise Network Management";"Lecture slides for Enterprise Network Management";/Enterprise_Network_Management.ppsx
+"Data-Center Network Managemenent.pdf";1528511;"Prof. Dr. Panagiotis Papadimitriou";"2016-01-26 18:43:13";"8. Data-Center Network Management";"Lecture slides for Datacenter Network Management";/Data-Center_Network_Managemenent.pdf
+"NM Questions.pdf";163793;"Prof. Dr. Panagiotis Papadimitriou";"2016-02-11 17:10:18";"Example Questions";"Examples of questions for the course exam";/NM_Questions.pdf
+Overview.pdf;169042;"Prof. Dr. Panagiotis Papadimitriou";"2015-10-14 17:01:47";Overview;"Course overview slides";/Overview.pdf
