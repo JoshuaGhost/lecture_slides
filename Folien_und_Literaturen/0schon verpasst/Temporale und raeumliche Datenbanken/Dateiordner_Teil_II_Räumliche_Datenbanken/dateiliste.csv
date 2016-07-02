@@ -1,0 +1,21 @@
+Dateiname;Größe;Ersteller;Datum;Name;Beschreibung;Pfad
+spat-einf.pdf;227605;"Prof. Dr. rer. nat. Udo Lipeck";"2015-11-17 16:17:23";"Kapitel 1: Einführung in Modellierung räumlicher Datentypen: 18.11.2015";;/spat-einf.pdf
+spat-realm.pdf;2400152;"Prof. Dr. rer. nat. Udo Lipeck";"2015-12-16 12:13:36";"Kapitel 2: Ein exemplarischer Ansatz: Realm-basierte räumliche Datentypen: 25.11.15 , 09./16.12.15";;/spat-realm.pdf
+geomalg.pdf;1064484;"Prof. Dr. rer. nat. Udo Lipeck";"2015-11-24 16:03:02";"Kapitel 2:: (Hintergrundmaterial Plane-Sweep-Algorithmen)";"Kapitel 7: Einfache Geometrische Algorithmen 
+aus Vorlesung Datenstrukturen und Algorithmen WS 11/12";/geomalg.pdf
+GS95.pdf;703165;"Prof. Dr. rer. nat. Udo Lipeck";"2015-11-10 18:15:15";"Kapitel 2:: (Hintergrundmaterial Realm-Definitionsstufen)";"Weitere Erläuterungen zu den Definitionsstufen: 
+Güting, R.H. / Schneider, M.: Realm-Based Spatial Data Types: The ROSE Algebra. VLDB Journal 4, 1995, pp. 243--286 
+(= http://www.vldb.org/journal/VLDBJ4/P243.pdf)";/GS95.pdf
+GdRS95.pdf;223008;"Prof. Dr. rer. nat. Udo Lipeck";"2015-11-10 18:15:15";"Kapitel 2:: (Hintergrundmaterial Realm-Implementierung)";"Weitere Erläuterungen zu den Algorithmen: 
+Güting, R.-H./ de Ridder, T./ Schneider, M.: Implementation of the ROSE Algebra: Efficient Algorithms for Realm-Based Spatial Data Types. Proc. SSD'95, LNCS 951, Springer, 1995, pp. 216-239
+(Kopie von http://www.springerlink.com/content/7009501712464256/fulltext.pdf)";/GdRS95.pdf
+spat-3.pdf;873839;"Prof. Dr. rer. nat. Udo Lipeck";"2015-12-16 12:12:47";"Kapitel 3: Räumliche Zugriffsstrukturen: 16.12.15";;/spat-3.pdf
+spat-4.pdf;1938103;"Prof. Dr. rer. nat. Udo Lipeck";"2016-01-13 09:51:48";"Kapitel 4: Verfahren zur Organisation des umgebenden Datenraums: 13.01.16";"A) Lokale Verfeinerung (K-D-B-Bäume)
+B) Dimensionsverfeinerung (Grid-Files)";/spat-4.pdf
+spat-5AB.pdf;1012685;"Prof. Dr. rer. nat. Udo Lipeck";"2016-01-27 08:54:02";"Kapitel 5: Zugriffsstrukturen für ausgedehnte räumliche Objekte: Teil A+B: 20.01.16";"Update 27.01.: Seiten 15,17,19,20,35 korrigiert
+
+A) Überlappende Regionen: R / R* - Bäume
+B) Disjunkte Regionen: R+ - Bäume
+C) Transformationsmethoden, insb. Z-Codes";/spat-5AB.pdf
+spat-5C+6.pdf;756184;"Prof. Dr. rer. nat. Udo Lipeck";"2016-01-31 18:42:28";"Kapitel 6: Räumliche Verbunde;  Kapitel 5, Teil C: 27.01.16";"Update 31.01.16: Seiten 5.49,54/55 korrigiert";/spat-5C+6.pdf
+tempspat_lit.pdf;67478;"Prof. Dr. rer. nat. Udo Lipeck";"2015-11-10 18:15:14";Literaturliste;;/tempspat_lit.pdf
