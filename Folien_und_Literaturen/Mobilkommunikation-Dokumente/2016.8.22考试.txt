@@ -1,0 +1,27 @@
+1.解释电磁波传播过程中的各种现象，比如diffraction、refraction、reflection、shadowing等都是什么
+2.解释Multipath-propagation是什么并说出它有什么影响
+3.Line of Sight传播的无线通信，有发射塔高10m，接收机高0m，地球半径6371km，求最长收发距离
+4.画图解释什么是“hidden station”什么是“exposed station”
+5.使用高斯公式计算信道带宽、信道速率、信道SNR
+6.什么是cochannel separation，为什么要用到这个概念
+7.使用多普勒频偏公式来解释在哪种情况下多普勒频偏会是一个大问题（1）蜂窝移动通信（2）卫星通信
+8.在cellular system中用大cell和小cell分别的advantage与disadvantage各列出一个
+9.使用重用比公式（D/R=sqrt(3N)与S/I=((D/R)^\gamma)/6）进行计算
+10.简述reservation based channel与full-random 是slotted ALOHA的区别
+11.简述MACA（CSMA/CA）的工作原理
+12.在哪种场景下ALOHA的效率要高于CSMA，为什么？
+13.随机过程的两道题，与去年一样
+14.简述两种无线网络架构（infrastructure和ad-hoc）
+15.列出四种方法以提高传输速率，并标注这种方法属于对PHY层还是对MAC层的改进
+16.Beacon帧的那个quasi sequential传输的图，要知道什么时候发送beacon帧，发送的beacon帧里面包含了什么时候的timestamp，简述beacon帧的功能
+17.near-far problem如何影响无线传输的fairness
+18.用公式的方式表示没有RTS、CTS的时候802.11 DCF一次传输的所需时间
+19.画DCF时序图，RTS SIFS CTS SIFS Data SIFS ACK DIFS backoff RTS，知道其他站点在我两个传输的时候是保持沉默的
+20.简述什么是Cell breathing，什么造成了Cell breathing
+21.编码问题，求那个chip sequence
+22.记住gsm系统各个功能模块的全称和功能
+23.计算time advance，知道time advance是1 chip 1 chip离散地进行的
+24.为什么要进行handover，解释什么叫handover margin
+25.什么是piconet，什么是scatternet
+26.一个蓝牙设备可否同时在两个piconet中充当master？为什么
+27.计算蓝牙调频，在长帧的时候知道调频先suspend再resume
